@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>TOMATO LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+
+        body {
+            background-image: url('{{url_for("static", filename="images/Back.jpg")}}');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+            color: rgb(8, 8, 8);
+            margin-top: 20px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .details h4 {
+            color: rgb(0, 0, 0);
+            margin-bottom: 10px;
+        }
+
+        .details h6 {
+            color: rgb(2, 2, 2);
+            line-height: 1.5;
+        }
+
+        .text-center {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Predict Tomato Leaf Disease & Get Cure</h1>
+
+        <div class="row mb-5">
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static', filename=user_image)}}" alt="User Image"
+                        style="width:100%; max-width:500px; height:auto;">
+                </span>
+            </div>
+
+            <div class="col-sm">
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">{{pred_output}}</h1>
+                </div>
+
+                <div class="details">
+                    <h4><b>Treatment:</b></h4>
+                    <h6>
+                        Copper fungicides are the most commonly recommended treatment for bacterial leaf spot. Use copper
+                        fungicide as a preventive measure after you’ve planted your seeds but before you’ve moved the plants
+                        into their permanent homes. You can use copper fungicide spray before or after a rain, but don’t
+                        treat with copper fungicide while it is raining. If you’re seeing signs of bacterial leaf spot,
+                        spray with copper fungicide for a seven- to 10-day period, then spray again for one week after
+                        plants are moved into the field. Perform maintenance treatments every 10 days in dry weather and
+                        every five to seven days in rainy weather.<br><br>
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kembali button -->
+        <div class="text-center">
+            <a href="/" class="btn btn-primary">Back to Predict</a>
+        </div>
+    </div>
+</body>
+
+</html>
